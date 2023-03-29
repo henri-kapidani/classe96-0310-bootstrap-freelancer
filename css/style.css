@@ -1,0 +1,12 @@
+.hero img {
+	width: 150px;
+}
+
+.portfolio .contents {
+	height: 250px;
+	background-color: brown;
+}
+
+.portfolio .mygreen .contents {
+	background-color: green;
+}
