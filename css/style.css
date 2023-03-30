@@ -1,12 +1,93 @@
+body {
+	margin-top: 56px;
+}
+
+.bg_green {
+	background-color: #1ABC9C;
+}
+
+.bg_blue {
+	background-color: #2C3E50;
+}
+
 .hero img {
 	width: 150px;
 }
 
 .portfolio .contents {
-	height: 250px;
 	background-color: brown;
 }
 
 .portfolio .mygreen .contents {
 	background-color: green;
+}
+
+
+.separator.light {
+	--color: white;
+}
+
+.separator.dark {
+	--color: #2C3E50;
+}
+
+.separator {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-inline: auto;
+	color: var(--color);
+	font-size: 20px;
+}
+
+.separator::before,
+.separator::after {
+	content: '';
+	flex-grow: 1;
+	display: block;
+	height: 4px;
+	background-color: var(--color);
+	border-radius: 9px;
+}
+
+.portfolio .contents {
+	position: relative;
+}
+
+.portfolio .contents:hover {
+	cursor: pointer;
+}
+
+.portfolio .contents:hover::before {
+	content: '';
+	display: block;
+	position: absolute;
+	inset: 0;
+	background-color: green;
+	opacity: .5;
+}
+
+.portfolio .contents:hover::after {
+	content: '';
+	display: block;
+	position: absolute;
+	inset: 0;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.form-control {
+	padding-inline: 0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-radius: 0;
+}
+
+.socials .social {
+	width: 3em;
+	height: 3em;
+	flex-shrink: 0;
 }
